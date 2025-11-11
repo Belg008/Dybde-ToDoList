@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Trash2, Plus, CheckCircle2, Circle, AlertCircle, Calendar, Tag,
-  Clock, Users, MessageSquare, Zap, Save, RefreshCw, Settings, Filter,
+  Trash2, Plus, CheckCircle2, Circle, AlertCircle, Calendar,
+  Clock, Users, Save, RefreshCw, Settings, Filter,
   ChevronDown, Edit2, Eye, EyeOff, Send
 } from 'lucide-react';
 import './Page.css';
@@ -129,7 +129,7 @@ const Page: React.FC = () => {
       title: input,
       description,
       completed: false,
-      priority,
+      Priority,
       status,
       createdAt: new Date().toISOString(),
       dueDate: dueDate || undefined,
