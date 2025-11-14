@@ -10,6 +10,6 @@ RUN npm run build
 FROM node:18-alpine
 WORKDIR /app
 RUN npm install -g serve
-# COPY --from=builder /app/build ./build
-EXPOSE 5173
-CMD ["serve", "-s", "build", "-l", "5173"]
+COPY --from=builder /app/dist ./dist
+EXPOSE 3000
+CMD ["serve", "-s", "dist", "-p", "3000"]
