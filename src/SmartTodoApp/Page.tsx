@@ -352,7 +352,7 @@ const Page: React.FC = () => {
           <div className="stat-item">
             <span className="stat-icon">🔥</span>
             <div className="stat-details">
-              <span className="stat-label">High Priority</span>
+              <span className="stat-label">High priority</span>
               <span className="stat-number">{stats.highpriority}</span>
             </div>
           </div>
@@ -427,7 +427,7 @@ const Page: React.FC = () => {
 
                 <div className="form-column-2">
                   <div className="form-group">
-                    <label>Priority</label>
+                    <label>priority</label>
                     <select value={priority} onChange={(e) => setpriority(e.target.value as any)} className="form-select">
                       <option value="low">🟢 Low</option>
                       <option value="medium">🟡 Medium</option>
