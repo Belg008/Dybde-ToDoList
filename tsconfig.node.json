@@ -15,6 +15,7 @@
     "module": "esnext",          
     "moduleResolution": "node",  
     "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
     "outDir": "./dist"
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
