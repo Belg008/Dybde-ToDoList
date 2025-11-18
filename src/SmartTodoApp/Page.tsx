@@ -42,7 +42,7 @@ const Page: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [input, setInput] = useState('');
   const [description, setDescription] = useState('');
-  const [priority, setPriority] = useState< 'Set Priority' | 'low' | 'medium' | 'high' | 'urgent'>('Set Priority');
+  const [priority, setpriority] = useState< 'Set priority' | 'low' | 'medium' | 'high' | 'urgent'>('Set priority');
   const [dueDate, setDueDate] = useState('');
   const [assignee, setAssignee] = useState('');
   const [category, setCategory] = useState('');
@@ -129,7 +129,7 @@ const Page: React.FC = () => {
       title: input,
       description,
       completed: false,
-      Priority,
+      priority,
       status,
       createdAt: new Date().toISOString(),
       dueDate: dueDate || undefined,
@@ -146,7 +146,7 @@ const Page: React.FC = () => {
     
     setInput('');
     setDescription('');
-    setPriority('Set Priority');
+    setpriority('Set priority');
     setDueDate('');
     setAssignee('');
     setCategory('');
@@ -229,7 +229,7 @@ const Page: React.FC = () => {
     completed: todos.filter((t) => t.completed).length,
     active: todos.filter((t) => !t.completed).length,
     inProgress: todos.filter((t) => t.status === 'in-progress').length,
-    highPriority: todos.filter((t) => t.priority === 'high' || t.priority === 'urgent').length,
+    highpriority: todos.filter((t) => t.priority === 'high' || t.priority === 'urgent').length,
   };
 
   const statusCounts = {
@@ -353,7 +353,7 @@ const Page: React.FC = () => {
             <span className="stat-icon">🔥</span>
             <div className="stat-details">
               <span className="stat-label">High Priority</span>
-              <span className="stat-number">{stats.highPriority}</span>
+              <span className="stat-number">{stats.highpriority}</span>
             </div>
           </div>
         </div>
@@ -428,7 +428,7 @@ const Page: React.FC = () => {
                 <div className="form-column-2">
                   <div className="form-group">
                     <label>Priority</label>
-                    <select value={priority} onChange={(e) => setPriority(e.target.value as any)} className="form-select">
+                    <select value={priority} onChange={(e) => setpriority(e.target.value as any)} className="form-select">
                       <option value="low">🟢 Low</option>
                       <option value="medium">🟡 Medium</option>
                       <option value="high">🔴 High</option>
