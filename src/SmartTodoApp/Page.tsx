@@ -42,7 +42,7 @@ const Page: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [input, setInput] = useState('');
   const [description, setDescription] = useState('');
-  const [priority, setpriority] = useState< 'Set priority' | 'low' | 'medium' | 'high' | 'urgent'>('Set priority');
+  const [priority, setPriority] = useState< 'set priority' | 'low' | 'medium' | 'high' | 'urgent'>('set priority');
   const [dueDate, setDueDate] = useState('');
   const [assignee, setAssignee] = useState('');
   const [category, setCategory] = useState('');
@@ -146,7 +146,7 @@ const Page: React.FC = () => {
     
     setInput('');
     setDescription('');
-    setpriority('Set priority');
+    setPriority('set priority');
     setDueDate('');
     setAssignee('');
     setCategory('');
@@ -428,7 +428,7 @@ const Page: React.FC = () => {
                 <div className="form-column-2">
                   <div className="form-group">
                     <label>priority</label>
-                    <select value={priority} onChange={(e) => setpriority(e.target.value as any)} className="form-select">
+                    <select value={priority} onChange={(e) => setPriority(e.target.value as any)} className="form-select">
                       <option value="low">🟢 Low</option>
                       <option value="medium">🟡 Medium</option>
                       <option value="high">🔴 High</option>
