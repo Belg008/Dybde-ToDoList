@@ -11,7 +11,11 @@
 
     /* Node-friendly */
     "moduleResolution": "node",
+    "target": "es6",
+    "module": "esnext",          
+    "moduleResolution": "node",  
     "allowImportingTsExtensions": true,
+    "outDir": "./dist"
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
 
